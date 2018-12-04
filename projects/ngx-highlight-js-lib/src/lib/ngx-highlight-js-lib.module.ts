@@ -1,10 +1,9 @@
-import { NgModule } from '@angular/core';
-import { NgxHighlightJsLibComponent } from './ngx-highlight-js-lib.component';
+import { NgModule } from "@angular/core";
+import { NgxHighlightJsLibComponent } from "./ngx-highlight-js-lib.component";
 
 @NgModule({
   declarations: [NgxHighlightJsLibComponent],
-  imports: [
-  ],
+  imports: [],
   exports: [NgxHighlightJsLibComponent]
 })
-export class NgxHighlightJsLibModule { }
+export class NgxHighlightJsLibModule {}
