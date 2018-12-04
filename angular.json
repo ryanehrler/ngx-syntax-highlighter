@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "ngx-highlight-js-lib": {
+      "root": "projects/ngx-highlight-js-lib",
+      "sourceRoot": "projects/ngx-highlight-js-lib/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-highlight-js-lib/tsconfig.lib.json",
+            "project": "projects/ngx-highlight-js-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-highlight-js-lib/src/test.ts",
+            "tsConfig": "projects/ngx-highlight-js-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-highlight-js-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-highlight-js-lib/tsconfig.lib.json",
+              "projects/ngx-highlight-js-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-highlight-js"
