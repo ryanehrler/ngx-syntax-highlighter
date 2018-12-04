@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxHighlightJsLibComponent } from "./ngx-highlight-js-lib.component";
+import { NgxHighlightJsLibComponent } from './ngx-highlight-js-lib.component';
 
-describe("NgxHighlightJsLibComponent", () => {
+describe('NgxHighlightJsLibComponent', () => {
   let component: NgxHighlightJsLibComponent;
   let fixture: ComponentFixture<NgxHighlightJsLibComponent>;
 
@@ -18,7 +18,7 @@ describe("NgxHighlightJsLibComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
