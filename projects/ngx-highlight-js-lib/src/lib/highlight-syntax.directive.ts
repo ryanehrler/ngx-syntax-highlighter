@@ -11,7 +11,7 @@ import { StyleService } from './services/style.service';
 import { SyntaxStyle } from './syntax-style.enum';
 
 @Directive({
-  selector: '[highlightSyntax]'
+  selector: '[ngxHighlightSyntax]'
 })
 export class HighlightSyntaxDirective {
   constructor(
@@ -33,8 +33,8 @@ export class HighlightSyntaxDirective {
     await this.highlightJsService.registerLanguage(language);
     await this.styleService.registerStyle(SyntaxStyle['AN-OLD-HOPE']);
 
-    let ih = this.elementRef.nativeElement.innerHTML;
-    ih = this.highlightJsService.highlightBlock(code);
+    const ih = this.elementRef.nativeElement.innerHTML;
+    // this.highlightJsService.highlightBlock(code);
   }
 
   private addStyle(style: SyntaxStyle) {

@@ -1,5 +1,5 @@
 import hljs from 'highlight.js/lib/highlight';
-import { Injectable } from '@angular/core';
+import { ElementRef, Injectable } from '@angular/core';
 import { Language } from '../language.enum';
 import { resolve } from 'url';
 
@@ -21,7 +21,8 @@ export class HighlightJsService {
     });
   }
 
-  highlightBlock(code: string) {
-    return hljs.highlightBlock(code);
+  highlightBlock(block: ElementRef) {
+    hljs.configure(Object.assign({}));
+    return hljs.highlightBlock(block.nativeElement);
   }
 }

@@ -1,3 +1,16 @@
 <div>
-  <textarea [highlightSyntax]="syntax">private test()</textarea>
+  <!-- <textarea [ngxHighlightSyntax]="syntax">private test()</textarea> -->
+</div>
+<div>
+  <ngx-syntax-highlighter [language]="syntax.language" [code]="syntax.code"></ngx-syntax-highlighter>
+</div>
+
+
+<div>---------</div>
+<div>
+  <pre>
+      <code class="hljs javascript">
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'fuck'</span>);
+      </code>
+    </pre>
 </div>

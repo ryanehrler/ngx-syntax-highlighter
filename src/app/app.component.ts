@@ -9,6 +9,8 @@ import { Language } from 'ngx-highlight-js-lib';
 export class AppComponent {
   syntax = {
     language: Language.JAVASCRIPT,
-    code: 'private whatAmI() {}'
+    code: `private whatAmI() {
+      console.log('fuck');
+    }`
   };
 }

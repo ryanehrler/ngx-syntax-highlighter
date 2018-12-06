@@ -14,7 +14,7 @@ export class StyleService {
   async registerStyle(style: SyntaxStyle) {
     return new Promise((resolveMain, rejectMain) => {
       const s = style.toLowerCase();
-      import(`highlight.js/styles/${style}`).then(css => {
+      import(`highlight.js/styles/${s}`).then(css => {
         console.log('import-style', css);
         resolveMain(true);
       });
