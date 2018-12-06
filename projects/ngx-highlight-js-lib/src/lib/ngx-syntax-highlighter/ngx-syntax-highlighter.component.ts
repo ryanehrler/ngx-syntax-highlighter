@@ -41,7 +41,6 @@ export class NgxSyntaxHighlighterComponent implements OnInit, AfterViewInit {
     await this.styleService.registerStyle(this.style);
     await this.highlightJsService.registerLanguage(this.language);
 
-    console.log('fuck off');
     // this.codeElement.nativeElement.innerHTML = this.code;
     console.log(this.codeElement.nativeElement.innerHTML);
     this.highlightJsService.highlightBlock(this.preElement);

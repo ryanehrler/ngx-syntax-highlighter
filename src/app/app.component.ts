@@ -10,7 +10,7 @@ export class AppComponent {
   syntax = {
     language: Language.JAVASCRIPT,
     code: `private whatAmI() {
-      console.log('fuck');
+      console.log('test');
     }`
   };
 }

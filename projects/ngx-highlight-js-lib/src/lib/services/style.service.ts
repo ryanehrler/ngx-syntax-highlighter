@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Inject, Injectable } from '@angular/core';
 import { SyntaxStyle } from '../syntax-style.enum';
 
 @Injectable({
@@ -7,7 +8,7 @@ import { SyntaxStyle } from '../syntax-style.enum';
 export class StyleService {
   constructor() {}
 
-  getStylePath(style: SyntaxStyle) {
+  getStylePath(style: SyntaxStyle, @Inject(DOCUMENT) document: any) {
     return '../assets/highlight.js/' + style;
   }
 
