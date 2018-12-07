@@ -1,10 +1,9 @@
-import { HighlightSyntaxDirective } from './highlight-syntax.directive';
 import { NgModule } from '@angular/core';
 import { NgxSyntaxHighlighterComponent } from './ngx-syntax-highlighter/ngx-syntax-highlighter.component';
 
 @NgModule({
-  declarations: [HighlightSyntaxDirective, NgxSyntaxHighlighterComponent],
+  declarations: [NgxSyntaxHighlighterComponent],
   imports: [],
-  exports: [HighlightSyntaxDirective, NgxSyntaxHighlighterComponent]
+  exports: [NgxSyntaxHighlighterComponent]
 })
 export class NgxHighlightJsModule {}

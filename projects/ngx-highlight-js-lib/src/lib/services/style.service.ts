@@ -6,19 +6,37 @@ import { SyntaxStyle } from '../syntax-style.enum';
   providedIn: 'root'
 })
 export class StyleService {
-  constructor() {}
+  private readonly STYLE_NODE_ID = 'highlightJsStyleNode';
 
-  getStylePath(style: SyntaxStyle, @Inject(DOCUMENT) document: any) {
-    return '../assets/highlight.js/' + style;
-  }
+  constructor(@Inject(DOCUMENT) private document: any) {}
 
   async registerStyle(style: SyntaxStyle) {
     return new Promise((resolveMain, rejectMain) => {
       const s = style.toLowerCase();
       import(`highlight.js/styles/${s}`).then(css => {
-        console.log('import-style', css);
+        this.addStyleToDocument(css.default);
         resolveMain(true);
       });
     });
+  }
+
+  private addStyleToDocument(styles: string) {
+    const node = this.createStyleElement();
+    node.innerHTML = styles;
+    this.document.body.appendChild(node);
+  }
+  private createStyleElement() {
+    this.removeStyleNode();
+    const styleNode = this.document.createElement('style');
+    styleNode.id = this.STYLE_NODE_ID;
+
+    return styleNode;
+  }
+  removeStyleNode() {
+    const node = this.document.getElementById(this.STYLE_NODE_ID);
+    if (node != null) {
+      console.log('remove-style-node');
+      node.parentNode.removeChild(node);
+    }
   }
 }
