@@ -4,6 +4,7 @@
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0",
-    "highlight.js": "^9.13.1"
+    "highlight.js": "^9.13.1",
+    "rxjs": "~6.3.3"
   }
 }

@@ -4,10 +4,10 @@ import {
   Inject,
   Input
   } from '@angular/core';
-import { HighlightJsService } from './services/highlight-js.service';
-import { Language } from './language.enum';
-import { StyleService } from './services/style.service';
-import { SyntaxStyle } from './syntax-style.enum';
+import { HighlightJsService } from '../services/highlight-js.service';
+import { Language } from '../language.enum';
+import { StyleService } from '../services/style.service';
+import { SyntaxStyle } from '../syntax-style.enum';
 
 @Directive({
   selector: '[ngxHighlightSyntax]'
