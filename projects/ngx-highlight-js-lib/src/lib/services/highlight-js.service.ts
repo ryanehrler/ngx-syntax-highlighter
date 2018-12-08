@@ -1,5 +1,5 @@
 import { ElementRef, Inject, Injectable } from '@angular/core';
-import { from } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { HighlightJsConfig } from '../highlight-js-config';
 import { HighlightJsConfigToken } from '../highlight-js-config.token';
 import { Language } from '../language.enum';
@@ -68,17 +68,19 @@ export class HighlightJsService {
   }
 
   private _initHljsWithNoLanguages() {
-    return from(import('highlight.js/lib/highlight')).pipe(
-      tap(hljs => {
-        this._hljs = hljs;
-      })
-    );
+    const obs = from(import('highlight.js/lib/highlight'));
+    return this._mapHljs(obs);
   }
 
   private _initHljsWithAllLanguages() {
-    return from(import('highlight.js')).pipe(
+    const obs = from(import('highlight.js'));
+    return this._mapHljs(obs);
+  }
+
+  private _mapHljs(hljsObs: Observable<any>) {
+    return hljsObs.pipe(
       tap(hljs => {
-        this._hljs = hljs;
+        this._hljs = hljs.default;
       })
     );
   }
