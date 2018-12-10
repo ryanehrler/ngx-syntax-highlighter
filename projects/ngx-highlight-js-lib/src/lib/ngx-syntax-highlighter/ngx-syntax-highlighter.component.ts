@@ -50,8 +50,9 @@ export class NgxSyntaxHighlighterComponent implements OnInit, AfterViewInit {
       this._setDefaultStyle();
 
       await this.styleService.registerStyle(this.style);
-
+      console.log(this.language);
       if (this.language != null) {
+        console.log(this.language);
         await this.highlightJsService.registerLanguage(this.language);
       }
 

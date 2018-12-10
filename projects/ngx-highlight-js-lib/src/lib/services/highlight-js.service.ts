@@ -1,5 +1,6 @@
 import {
   BehaviorSubject,
+  empty,
   forkJoin,
   from,
   Observable,
@@ -98,6 +99,10 @@ export class HighlightJsService {
   }
 
   private _registerLanguagesFromConfig() {
+    if (this.config.languages == null) {
+      console.log('no-languages');
+      return of({});
+    }
     return from(this.config.languages).pipe(
       map(lang => from(this.registerLanguage(Language[lang])))
     );
@@ -115,7 +120,7 @@ export class HighlightJsService {
 
   private _mapHljs(hljsObs: Observable<any>): Observable<any> {
     return hljsObs.pipe(
-      delay(5000),
+      // delay(5000),
       tap(hljs => {
         const library = hljs.default;
         library.configure(Object.assign({}));
