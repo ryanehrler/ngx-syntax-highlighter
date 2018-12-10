@@ -23,12 +23,12 @@ export class NgxSyntaxHighlighterComponent implements OnInit, AfterViewInit {
   private _style: SyntaxStyle;
   @Input('style')
   set style(s: SyntaxStyle) {
-    this.setStyle(s);
+    this._setStyle(s);
   }
   get style() {
     return this._style;
   }
-  @Input() language: Language;
+  @Input() language?: Language;
   @Input() code: string;
 
   @ViewChild('codeContainer') codeContainerElement: ElementRef;
@@ -42,28 +42,52 @@ export class NgxSyntaxHighlighterComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {}
   async ngAfterViewInit() {
-    if (!this.style) {
-      this.style = SyntaxStyle['ATOM-ONE-DARK'];
-    }
-    await this.styleService.registerStyle(this.style);
-    await this.highlightJsService.registerLanguage(this.language);
+    this.highlightJsService._initialized.subscribe(async serviceInitialized => {
+      if (!serviceInitialized) {
+        return;
+      }
 
-    this._initialized = true;
-    // this.codeElement.nativeElement.innerHTML = this.code;
-    console.log(this.codeElement.nativeElement.innerHTML);
-    this.runHighlighter();
+      this._setDefaultStyle();
+
+      await this.styleService.registerStyle(this.style);
+
+      if (this.language != null) {
+        await this.highlightJsService.registerLanguage(this.language);
+      }
+
+      this._initialized = true;
+      // this.codeElement.nativeElement.innerHTML = this.code;
+      // console.log(this.codeElement.nativeElement.innerHTML);
+      this._runHighlighter();
+    });
   }
 
-  private async setStyle(style: SyntaxStyle) {
+  private async _setStyle(style: SyntaxStyle) {
     this._style = style;
     console.log('set-style', style);
     if (this._initialized) {
       await this.styleService.registerStyle(style);
-      this.runHighlighter();
+      this._runHighlighter();
     }
   }
 
-  private runHighlighter() {
-    this.highlightJsService.highlightBlock(this.preElement);
+  private _setDefaultStyle() {
+    if (!this.style) {
+      this.style = SyntaxStyle['ATOM-ONE-DARK'];
+    }
+  }
+
+  private _runHighlighter() {
+    this.highlightJsService.highlightBlock(this.preElement).subscribe(
+      result => {
+        console.log('run-highlighter-result', result);
+      },
+      err => {
+        console.log('run-highlighter-error', err);
+      },
+      () => {
+        console.log('run-highlighter-complete');
+      }
+    );
   }
 }
