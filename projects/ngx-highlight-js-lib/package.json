@@ -1,6 +1,12 @@
 {
-  "name": "ngx-highlight-js-lib",
+  "name": "ngx-highlight.js",
+  "description": "Angular port of Highlight.js. No CDN - runtime support for all languages and syntax styles.",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanehrler/ngx-highlight.js"
+  },
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0",

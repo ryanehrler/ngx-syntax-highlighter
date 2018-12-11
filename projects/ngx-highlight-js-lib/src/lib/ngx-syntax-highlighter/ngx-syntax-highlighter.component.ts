@@ -74,7 +74,7 @@ export class NgxSyntaxHighlighterComponent implements OnInit, AfterViewInit {
 
   private _setDefaultStyle() {
     if (!this.style) {
-      this.style = SyntaxStyle['ATOM-ONE-DARK'];
+      this.style = SyntaxStyle.GITHUB;
     }
   }
 
