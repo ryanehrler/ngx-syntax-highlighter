@@ -31,6 +31,20 @@ export class AppComponent {
     declare magicNumber number;
     myArray.forEach(() => { }); // fat arrow syntax
     `;
+  csharp = `class Program
+    {
+        static void Main()
+        {
+            string[] pets = { "dog", "cat", "bird" };
+
+            // ... Loop with the foreach keyword.
+            foreach (var value in pets)
+            {
+                Console.WriteLine(value);
+            }
+        }
+    }
+  `;
 
   constructor() {
     this.styles = Object.keys(SyntaxStyle);

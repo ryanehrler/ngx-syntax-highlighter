@@ -3,17 +3,32 @@
 </div>
 <div>
   <div>JavaScript</div>
-  <ngx-syntax-highlighter [language]="languages.JAVASCRIPT" [code]="syntax.code" [style]="selectedStyle"></ngx-syntax-highlighter>
+  <ngx-syntax-highlighter
+    [language]="languages.JAVASCRIPT"
+    [code]="syntax.code"
+    [style]="selectedStyle"
+  ></ngx-syntax-highlighter>
 </div>
 
 <div>
   <div>TypeScript</div>
-  <ngx-syntax-highlighter [language]="languages.TYPESCRIPT" [style]="selectedStyle" [code]="typescript"></ngx-syntax-highlighter>
+  <ngx-syntax-highlighter
+    [style]="selectedStyle"
+    [code]="typescript"
+  ></ngx-syntax-highlighter>
 </div>
 
+<div>
+  <div>C#</div>
+  <ngx-syntax-highlighter
+    [language]="languages.CS"
+    [style]="selectedStyle"
+    [code]="csharp"
+  ></ngx-syntax-highlighter>
+</div>
 
 <div>
   <select (change)="changeStyle($event)">
-    <option *ngFor="let s of styles" [value]="s">{{s}}</option>
+    <option *ngFor="let s of styles" [value]="s">{{ s }}</option>
   </select>
 </div>

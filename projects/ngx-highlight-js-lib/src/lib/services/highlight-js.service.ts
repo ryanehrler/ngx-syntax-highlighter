@@ -47,11 +47,12 @@ export class HighlightJsService {
     // I converted this method to use observables but the dynamic import + dynamic lang name
     // does not play nice.  Wrapping the import like from(import()) does not work.  Which is
     // a shame because the code is much cleaner :(
+
     return new Promise((resolveMain, rejectMain) => {
       const l = lang.toLowerCase();
       import(`highlight.js/lib/languages/${l}`).then(javascript => {
         this._executeHljsCommand(hljs => {
-          hljs.registerLanguage('javascript', javascript.default);
+          hljs.registerLanguage(l, javascript.default);
         }).subscribe(
           result => {
             resolveMain(result);

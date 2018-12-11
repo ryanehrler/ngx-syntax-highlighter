@@ -11,8 +11,8 @@ import {
 import { NgModule } from '@angular/core';
 
 const highlightJsConfig: HighlightJsConfig = {
-  style: SyntaxStyle['AN-OLD-HOPE']
-  // languages: [Language.TYPESCRIPT, Language.JAVASCRIPT]
+  style: SyntaxStyle['AN-OLD-HOPE'],
+  languages: [Language.TYPESCRIPT]
 };
 
 @NgModule({
