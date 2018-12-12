@@ -7,6 +7,15 @@
 ```bash
 $ npm install --save ngx-highlight.js
 ```
+## Brief description on Highlight.js
+Highlight.js will give you syntax highlighting but will not format your code.  When adding 
+syntax styling Highlight.js will auto detect the language based on the current array of 
+languages in it's memory.  **This array of languages is configurable**.  It is not recommended
+you load ALL languages as there are 185 supported lanuages; however if you don't care about the
+binary size you can do this.  **Currently** only one syntax style can be loaded at a single time,
+however you can change these on the fly.
+
+<a href="https://highlightjs.org/">More info here on Highlight.js</a>
 
 ## Quickstart
 
@@ -34,7 +43,7 @@ import {
   Language,
   NgxHighlightJsModule,
   SyntaxStyle
-  } from 'ngx-highlight-js-lib';
+  } from 'ngx-highlight.js';
 
 const highlightJsConfig: HighlightJsConfig = {
   style: SyntaxStyle['AN-OLD-HOPE'],
@@ -62,7 +71,7 @@ const highlightJsConfig: HighlightJsConfig = {
 |           |           Language[] | Array of languages which will be loaded on init. Can still specify languages later in component.                    |
 |           |                'all' | Will load Highlight.js with all languages. This is the simplest solution but also will generate the largest binary. |
 
-#### Config Examples
+#### More Config Examples
 **Note:** Configuring in the Module import is optional.
 
 ```typescript
