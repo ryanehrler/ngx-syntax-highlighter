@@ -66,7 +66,7 @@ const highlightJsConfig: HighlightJsConfig = {
 | --------- | -------------------: | :------------------------------------------------------------------------------------------------------------------ |
 | style     |                 null | No syntax style specified will use default (GITHUB)                                                                 |
 |           | SyntaxStyle['STYLE'] | All supported styles listed in enum. Intellisense will ensure you select a valid style.                             |
-|           |                      |                                                                                                                     |
+|           |                      | ~                                                                                                                   |
 | languages |                 null | None specified means you will supply a language later in the component.                                             |
 |           |           Language[] | Array of languages which will be loaded on init. Can still specify languages later in component.                    |
 |           |                'all' | Will load Highlight.js with all languages. This is the simplest solution but also will generate the largest binary. |
@@ -104,9 +104,7 @@ imports: [
 ```
 
 ### Syntax Highlighter Component
-To highlight a block of code use the below component.
-
-In your component.html
+To highlight a block of code use the below component in your component.html
 
 ```html
 <ngx-syntax-highlighter
