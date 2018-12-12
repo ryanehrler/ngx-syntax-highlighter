@@ -9,13 +9,14 @@ import { Language, SyntaxStyle } from 'ngx-highlight-js-lib';
 export class AppComponent {
   styles: string[];
   selectedStyle: string;
+  syntaxStyle = SyntaxStyle;
+  languages = Language;
   syntax = {
     language: Language.JAVASCRIPT,
     code: `private whatAmI() {
       console.log('test');
     }`
   };
-  languages = Language;
   typescript = `class MyClass {
       public static myValue: string;
       constructor(init: string) {
