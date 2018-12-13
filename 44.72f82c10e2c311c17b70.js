@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[44],{"7bTR":function(p,n,e){p.exports=e.p+"brown-papersq.82cd9f5d6e9f0e3f3de2.png"}}]);
