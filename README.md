@@ -1,6 +1,7 @@
-<a href="https://github.com/ryanehrler/ngx-highlight.js">
+<a href="https://ryanehrler.github.io/ngx-highlight.js/">
   <h1 align="center">ngx-Highlight.js</h1>
 <a/>
+Check it out in action <a href="https://ryanehrler.github.io/ngx-highlight.js/">here.</a>
 
 ## Installing
 
@@ -17,7 +18,7 @@ however you can change these on the fly.
 
 <a href="https://highlightjs.org/">More info here on Highlight.js</a>
 
-## Quickstart
+## Start
 
 Import **NgxHighlightJsModule** module in app.module or core.module.
 

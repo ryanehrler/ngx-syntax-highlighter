@@ -1,0 +1,16 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 100px auto;
+  justify-items: center;
+}
+
+.style-container {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.code-container {
+  grid-column: 2;
+  grid-row: 2;
+}

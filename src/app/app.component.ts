@@ -8,7 +8,7 @@ import { Language, SyntaxStyle } from 'ngx-highlight-js-lib';
 })
 export class AppComponent {
   styles: string[];
-  selectedStyle: string;
+  selectedStyle: string = SyntaxStyle["AN-OLD-HOPE"];
   syntaxStyle = SyntaxStyle;
   languages = Language;
   syntax = {
