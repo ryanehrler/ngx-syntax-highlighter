@@ -3,5 +3,9 @@
   "dest": "../../dist/ngx-highlight-js-lib",
   "lib": {
     "entryFile": "src/public_api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "tslib",
+    "highlight.js"
+  ]
 }
