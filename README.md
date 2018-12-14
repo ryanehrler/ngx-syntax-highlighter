@@ -1,12 +1,12 @@
 <a href="https://ryanehrler.github.io/ngx-highlight.js/">
-  <h1 align="center">ngx-Highlight.js</h1>
+  <h1 align="center">ngx-syntax-highlighter</h1>
 <a/>
 Check it out in action <a href="https://ryanehrler.github.io/ngx-highlight.js/">here.</a>
 
 ## Installing
 
 ```bash
-$ npm install --save ngx-highlight.js
+$ npm install --save ngx-syntax-highlighter
 ```
 ## Brief description on Highlight.js
 Highlight.js will give you syntax highlighting but will not format your code.  When adding 
@@ -23,7 +23,7 @@ however you can change these on the fly.
 Import **NgxHighlightJsModule** module in app.module or core.module.
 
 ```typescript
-import { NgxHighlightJsModule } from 'ngx-highlight.js'
+import { NgxHighlightJsModule } from 'ngx-syntax-highlighter'
 
 (...)
 
@@ -44,7 +44,7 @@ import {
   Language,
   NgxHighlightJsModule,
   SyntaxStyle
-  } from 'ngx-highlight.js';
+  } from 'ngx-syntax-highlighter';
 
 const highlightJsConfig: HighlightJsConfig = {
   style: SyntaxStyle['AN-OLD-HOPE'],
@@ -124,7 +124,7 @@ OR if you setup the language and style in the module import you can just pass in
 In your component.ts
 ```typescript
 
-import { Language, SyntaxStyle } from 'ngx-highlight.js';
+import { Language, SyntaxStyle } from 'ngx-syntax-highlighter';
 export class AppComponent {
   syntaxStyle = SyntaxStyle;
   languages = Language;
