@@ -47,8 +47,6 @@ export class NgxSyntaxHighlighterComponent implements OnInit, AfterViewInit {
         return;
       }
 
-      this._setDefaultStyle();
-
       await this.styleService.registerStyle(this.style);
       console.log(this.language);
       if (this.language != null) {
@@ -69,12 +67,6 @@ export class NgxSyntaxHighlighterComponent implements OnInit, AfterViewInit {
     if (this._initialized) {
       await this.styleService.registerStyle(style);
       this._runHighlighter();
-    }
-  }
-
-  private _setDefaultStyle() {
-    if (!this.style) {
-      this.style = SyntaxStyle.GITHUB;
     }
   }
 

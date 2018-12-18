@@ -1,7 +1,5 @@
 import {
   BehaviorSubject,
-  empty,
-  forkJoin,
   from,
   Observable,
   of,
@@ -9,24 +7,11 @@ import {
   timer,
   zip
   } from 'rxjs';
-import {
-  combineAll,
-  concatMap,
-  delay,
-  exhaustMap,
-  flatMap,
-  map,
-  mapTo,
-  mergeAll,
-  mergeMap,
-  switchMap,
-  tap,
-  throttleTime
-  } from 'rxjs/operators';
 import { ElementRef, Inject, Injectable } from '@angular/core';
 import { HighlightJsConfig } from '../highlight-js-config';
 import { HighlightJsConfigToken } from '../highlight-js-config.token';
 import { Language } from '../language.enum';
+import { map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -85,7 +70,7 @@ export class HighlightJsService {
     }
 
     hljsObs.subscribe(hljs => {
-      console.log('hljs-init-complete', hljs);
+      // console.log('hljs-init-complete', hljs);
       this._initialized.next(true);
     });
   }
@@ -101,7 +86,7 @@ export class HighlightJsService {
 
   private _registerLanguagesFromConfig() {
     if (this.config.languages == null) {
-      console.log('no-languages');
+      // console.log('no-languages');
       return of({});
     }
     return from(this.config.languages).pipe(
