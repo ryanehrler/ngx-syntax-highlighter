@@ -1,7 +1,7 @@
 {
   "name": "ngx-syntax-highlighter",
   "description": "Angular port of Highlight.js. No CDN - runtime support for all languages and syntax styles.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "repository": {
     "type": "git",
     "url": "https://github.com/ryanehrler/ngx-highlight.js"
