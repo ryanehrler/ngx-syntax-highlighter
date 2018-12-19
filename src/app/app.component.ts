@@ -47,6 +47,8 @@ export class AppComponent {
     }
   `;
 
+  bash = `npm install @angular/cli -g`;
+
   constructor() {
     this.styles = Object.keys(SyntaxStyle);
   }

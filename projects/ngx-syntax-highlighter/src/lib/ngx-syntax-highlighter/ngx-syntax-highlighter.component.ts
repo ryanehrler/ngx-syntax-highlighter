@@ -30,6 +30,7 @@ export class NgxSyntaxHighlighterComponent implements OnInit, AfterViewInit {
   }
   @Input() language?: Language;
   @Input() code: string;
+  @Input() forceLanguage = false;
 
   @ViewChild('codeContainer') codeContainerElement: ElementRef;
   @ViewChild('preElement') preElement: ElementRef;

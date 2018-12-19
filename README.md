@@ -144,3 +144,14 @@ export class AppComponent {
     `;
 }
 ```
+
+#### Force Language
+If Highlight.js isn't recognizing the correct language or incorrectly recognizing the language, then use the **[forceLanguage]** attribute.  Make sure you also specify the **[language]** too.
+
+```html
+<ngx-syntax-highlighter 
+  [language]="languages.BASH" 
+  [code]="bash" 
+  [forceLanguage]="true">
+</ngx-syntax-highlighter>
+```
