@@ -24,10 +24,9 @@
     "lint-format": "npm run lint-fix && npm run format-ts && npm run format-html && npm run format-css && npm run lib:format-ts && npm run lib:format-html && npm run lib:format-css",
     "check-for-tslint-prettier-conflicts": "node_modules/.bin/tslint-config-prettier-check ./tslint.json",
     "----------------------------------------------------------------------------------------------------------------------------------": "",
-    "github:build": "ng build --prod --base-href https://ryanehrler.github.io/ngx-highlight.js/",
+    "github:build": "ng build --prod --base-href https://ryanehrler.github.io/ngx-syntax-highlighter/",
     "github:deploy": "ngh --dir=dist/ngx-syntax-highlighter-app",
     "github:bd": "npm run github:build && npm run github:deploy"
-
   },
   "private": true,
   "dependencies": {
