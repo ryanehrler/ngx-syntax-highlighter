@@ -297,7 +297,8 @@ MIT
 @angular/common
 MIT
 
-ngx-highlight-js-lib
+ngx-syntax-highlighter
+MIT
 
 @angular/platform-browser
 MIT
