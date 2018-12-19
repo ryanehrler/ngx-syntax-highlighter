@@ -1,7 +1,7 @@
-<a href="https://ryanehrler.github.io/ngx-highlight.js/">
+<a href="https://ryanehrler.github.io/ngx-syntax-highlighter/">
   <h1 align="center">ngx-syntax-highlighter</h1>
 <a/>
-Check it out in action <a href="https://ryanehrler.github.io/ngx-highlight.js/">here.</a>
+Check it out in action <a href="https://ryanehrler.github.io/ngx-syntax-highlighter/">here.</a>
 
 ## Installing
 
