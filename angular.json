@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-highlight-js": {
+    "ngx-syntax-highlighter-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-highlight-js",
+            "outputPath": "dist/ngx-syntax-highlighter-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-highlight-js:build"
+            "browserTarget": "ngx-syntax-highlighter-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-highlight-js:build:production"
+              "browserTarget": "ngx-syntax-highlighter-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-highlight-js:build"
+            "browserTarget": "ngx-syntax-highlighter-app:build"
           }
         },
         "test": {
@@ -102,7 +102,7 @@
         }
       }
     },
-    "ngx-highlight-js-e2e": {
+    "ngx-syntax-highlighter-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +111,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-highlight-js:serve"
+            "devServerTarget": "ngx-syntax-highlighter-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-highlight-js:serve:production"
+              "devServerTarget": "ngx-syntax-highlighter-app:serve:production"
             }
           }
         },
@@ -130,33 +130,33 @@
         }
       }
     },
-    "ngx-highlight-js-lib": {
-      "root": "projects/ngx-highlight-js-lib",
-      "sourceRoot": "projects/ngx-highlight-js-lib/src",
+    "ngx-syntax-highlighter": {
+      "root": "projects/ngx-syntax-highlighter",
+      "sourceRoot": "projects/ngx-syntax-highlighter/src",
       "projectType": "library",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ngx-highlight-js-lib/tsconfig.lib.json",
-            "project": "projects/ngx-highlight-js-lib/ng-package.json"
+            "tsConfig": "projects/ngx-syntax-highlighter/tsconfig.lib.json",
+            "project": "projects/ngx-syntax-highlighter/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-highlight-js-lib/src/test.ts",
-            "tsConfig": "projects/ngx-highlight-js-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-highlight-js-lib/karma.conf.js"
+            "main": "projects/ngx-syntax-highlighter/src/test.ts",
+            "tsConfig": "projects/ngx-syntax-highlighter/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-syntax-highlighter/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-highlight-js-lib/tsconfig.lib.json",
-              "projects/ngx-highlight-js-lib/tsconfig.spec.json"
+              "projects/ngx-syntax-highlighter/tsconfig.lib.json",
+              "projects/ngx-syntax-highlighter/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -166,5 +166,5 @@
       }
     }
   },
-  "defaultProject": "ngx-highlight-js"
+  "defaultProject": "ngx-syntax-highlighter-app"
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ngx-highlight-js-lib",
+  "dest": "../../dist/ngx-syntax-highlighter",
   "lib": {
     "entryFile": "src/public_api.ts"
   },

@@ -7,11 +7,11 @@ import {
   Language,
   NgxHighlightJsModule,
   SyntaxStyle
-  } from 'ngx-highlight-js-lib';
+  } from 'ngx-syntax-highlighter';
 import { NgModule } from '@angular/core';
 
 const highlightJsConfig: HighlightJsConfig = {
-  // style: SyntaxStyle['AN-OLD-HOPE'],
+  style: SyntaxStyle['AN-OLD-HOPE'],
   languages: [Language.TYPESCRIPT]
 };
 

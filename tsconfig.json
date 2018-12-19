@@ -18,11 +18,11 @@
       "dom"
     ],
     "paths": {
-      "ngx-highlight-js-lib": [
-        "dist/ngx-highlight-js-lib"
+      "ngx-syntax-highlighter": [
+        "dist/ngx-syntax-highlighter"
       ],
-      "ngx-highlight-js-lib/*": [
-        "dist/ngx-highlight-js-lib/*"
+      "ngx-syntax-highlighter/*": [
+        "dist/ngx-syntax-highlighter/*"
       ]
     }
   }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Language, SyntaxStyle } from 'ngx-highlight-js-lib';
+import { Language, SyntaxStyle } from 'ngx-syntax-highlighter';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { Language, SyntaxStyle } from 'ngx-highlight-js-lib';
 })
 export class AppComponent {
   styles: string[];
-  selectedStyle: string = SyntaxStyle["AN-OLD-HOPE"];
+  selectedStyle: string = SyntaxStyle['AN-OLD-HOPE'];
   syntaxStyle = SyntaxStyle;
   languages = Language;
   syntax = {
